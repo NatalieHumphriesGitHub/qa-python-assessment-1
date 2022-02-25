@@ -115,8 +115,6 @@ def three(input):
 
 
 def four(input):
-
-
     return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -172,16 +170,7 @@ def six(string, int, char):
 	else:
 		return False
 
-print(six("AAbb",1,'b'))
-
-	#check first if the int is lower than the length of the string
-	#If yes, identify the index number of the string based on the int but minus 1
-	#compare it to the char stated
-	#
-# or we could count the length of the word 
-# Add one for the index
-
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+	#------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 7>
 
@@ -202,7 +191,15 @@ print(six("AAbb",1,'b'))
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-	return -1
+	new_input_string = inputString.strip()				#I am trying to strip the whitespace here but I can't understand why my new variable is not saving as one?
+	if char in new_input_string:	
+		return((new_input_string.index(char)) + 1)
+	else:
+		return -1
+
+print(seven("This is a Sentence","S"))
+
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -255,13 +252,6 @@ def eight(arg1):
 	
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
-def nine(input):
-	if "bert" in (input):
-		return input.replace("bert","")
-	else:
-		return ""
-
-print(nine("xxbertfridgebertyy"))
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
